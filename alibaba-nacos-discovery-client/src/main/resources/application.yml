@@ -1,11 +1,10 @@
 spring:
   application:
-    name: alibaba-nacos-discovery-server
+    name: alibaba-nacos-discovery-client
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
 
 server:
-  port: 8601
-
+  port: 8602

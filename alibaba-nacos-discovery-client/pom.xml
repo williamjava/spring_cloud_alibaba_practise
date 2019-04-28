@@ -5,15 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <!--注意：boot的版本，经测试，2.1.x的，服务无法注册到nacos-->
         <version>2.0.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.gui.alibaba.nacos.discovery</groupId>
-    <artifactId>alibaba-nacos-discovery-server</artifactId>
+    <groupId>com.gui.alibaba.nacos.client</groupId>
+    <artifactId>alibaba-nacos-discovery-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>alibaba-nacos-discovery-server</name>
-    <description>alibaba-nacos-discovery-server</description>
+    <name>alibaba-nacos-discovery-client</name>
+    <description>alibaba-nacos-discovery-client</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -38,7 +37,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
