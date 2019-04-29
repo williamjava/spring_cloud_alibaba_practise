@@ -8,11 +8,11 @@
         <version>2.1.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.gui.alibaba.nacos.client</groupId>
-    <artifactId>alibaba-nacos-discovery-client</artifactId>
+    <groupId>com.gui.alibaba.nacos.config</groupId>
+    <artifactId>alibaba-nacos-config-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>alibaba-nacos-discovery-client</name>
-    <description>alibaba-nacos-discovery-client</description>
+    <name>alibaba-nacos-config-client</name>
+    <description>alibaba-nacos-config-client</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -31,12 +31,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
         <dependency>

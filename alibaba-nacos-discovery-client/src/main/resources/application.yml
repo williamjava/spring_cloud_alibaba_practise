@@ -5,6 +5,9 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8603
 
 server:
   port: 8602
