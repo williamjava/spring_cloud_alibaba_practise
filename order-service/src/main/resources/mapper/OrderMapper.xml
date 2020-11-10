@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sc.alibaba.order.mapper.OrderMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.sc.alibaba.order.entity.Order" id="orderMap">
+        <result property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="orderNo" column="order_no"/>
+        <result property="stockId" column="stock_id"/>
+        <result property="stockNum" column="stock_num"/>
+        <result property="totalPrice" column="total_price"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="createBy" column="create_by"/>
+        <result property="deleted" column="is_deleted"/>
+    </resultMap>
+
+
+</mapper>

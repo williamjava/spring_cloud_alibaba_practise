@@ -1,5 +1,6 @@
 package com.sc.alibaba.order;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -14,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @SpringBootApplication(scanBasePackages = {"com.sc.alibaba.order.*"})
 @EnableFeignClients
+@MapperScan("com.sc.alibaba.order.mapper")
 public class OrderServiceApplication {
 
     @Bean
