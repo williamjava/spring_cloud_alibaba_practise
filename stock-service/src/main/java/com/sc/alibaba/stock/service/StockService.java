@@ -3,6 +3,7 @@ package com.sc.alibaba.stock.service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sc.alibaba.stock.entity.Stock;
 import com.sc.alibaba.stock.mapper.StockMapper;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ public class StockService extends ServiceImpl<StockMapper, Stock> {
      * @param stockId
      * @param productNum
      */
+    @GlobalTransactional
     public void deduct(Long stockId, Integer productNum) {
         System.out.println("扣减库存deduct开始...stockId=" + stockId + "，productNum=" + productNum);
         Stock stock = getBaseMapper().selectById(stockId);

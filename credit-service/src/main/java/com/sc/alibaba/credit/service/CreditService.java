@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sc.alibaba.credit.entity.Credit;
 import com.sc.alibaba.credit.mapper.CreditMapper;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -21,6 +22,7 @@ public class CreditService extends ServiceImpl<CreditMapper, Credit> {
      * @param userId
      * @param points
      */
+    @GlobalTransactional
     public void addPoints(Long userId, Integer points) {
         System.out.println("增加积分addPoints开始...userId=" + userId + "，points=" + points);
         List<Credit> creditList = getBaseMapper().selectList(new LambdaQueryWrapper<Credit>().eq(Credit::getUserId, userId));

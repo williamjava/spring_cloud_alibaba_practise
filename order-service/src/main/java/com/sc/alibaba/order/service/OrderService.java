@@ -3,6 +3,7 @@ package com.sc.alibaba.order.service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sc.alibaba.order.entity.Order;
 import com.sc.alibaba.order.mapper.OrderMapper;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,7 @@ public class OrderService extends ServiceImpl<OrderMapper, Order> {
      * @param productNum
      * @param totalPrice
      */
+    @GlobalTransactional
     public void create(Long userId, Long stockId, Integer productNum, BigDecimal totalPrice) {
         //1.创建订单
         addOrder(userId, stockId, productNum, totalPrice);
