@@ -13,8 +13,8 @@ import org.springframework.web.client.RestTemplate;
  *
  * 使用sentinel进行服务的流量控制和熔断(打到一定错误比例就不调用服务，一定时间周期之后重新调用)
  */
-@SpringBootApplication(scanBasePackages = {"com.sc.alibaba.order.*"})
-@EnableFeignClients
+@SpringBootApplication(scanBasePackages = {"com.sc.alibaba"})
+@EnableFeignClients("com.sc.alibaba")
 @MapperScan("com.sc.alibaba.order.mapper")
 public class OrderServiceApplication {
 

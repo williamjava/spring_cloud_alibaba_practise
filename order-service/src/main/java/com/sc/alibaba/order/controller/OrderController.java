@@ -1,9 +1,7 @@
 package com.sc.alibaba.order.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.sc.alibaba.order.service.CreditService;
 import com.sc.alibaba.order.service.OrderService;
-import com.sc.alibaba.order.service.StockService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -21,11 +19,6 @@ import java.math.BigDecimal;
 public class OrderController {
     @Value("${author.name}")
     private String name;
-
-    @Resource
-    private StockService stockService;
-    @Resource
-    private CreditService creditService;
 
     @Resource
     private OrderService orderService;

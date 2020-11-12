@@ -1,7 +1,7 @@
-package com.sc.alibaba.order.service;
+package com.sc.alibaba.credit.clients;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @FeignClient(value = "credit-service", fallback = CreditFallback.class)
 public interface CreditService {
-    @PostMapping("/addPoints")
+    @GetMapping("/addPoints")
     String addPoints(@RequestParam("userId") Long userId, @RequestParam("points") Integer points);
 }

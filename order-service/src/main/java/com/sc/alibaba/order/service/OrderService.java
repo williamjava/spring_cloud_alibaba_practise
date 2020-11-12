@@ -1,8 +1,10 @@
 package com.sc.alibaba.order.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.sc.alibaba.credit.clients.CreditService;
 import com.sc.alibaba.order.entity.Order;
 import com.sc.alibaba.order.mapper.OrderMapper;
+import com.sc.alibaba.stock.clients.StockService;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
