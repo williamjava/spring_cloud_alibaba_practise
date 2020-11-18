@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: dubbo-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  main:
+    allow-bean-definition-overriding: true
+
+
+server:
+  port: 8090
+dubbo:
+  scan:
+    base-packages: com.sc.ali.dubbo.provider.service
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
